@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weblog</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div id='navbar'>
+		<ul>
+			<% current_user = User.find_by_id(session[:user_id])%>	
+			<% if current_user != nil %>
+				<li><%=link_to "Admin Home", admin_path%></li>
+				<li><%=link_to "My Posts", blogs_path %></li>
+				<li><%=link_to "New Post", new_blog_path %></li>
+				<li><%= link_to 'Logout', logout_path, :method => :delete, :class => "logoutlink" %></li>
+			<% else %>
+				<li><a href="/">Home</a> </li>
+				<li><a href="/posts">Posts</a> </li>
+				<li><a href="/about">About Us</a> </li>
+				<li><a href="/contact">Contact Us</a> </li>
+				<li><%= link_to 'Login', login_path, :class => "loginlink" %></li>
+			<%end%>
+		</ul>
+    </div>
+
+	<div id="content">
+	  <div id="headtext">
+			<h1> Level Ground </h1>
+				<p>"Teach me to do Your will, for You are my God; let Your good Spirit lead me on level ground." Psalm 143:10</p>
+			<p> Welcome to Level Ground, a blog about anything and everything. Well, almost. This blog will encompass the random musings of a young Christian couple. You will find that the blogs posted here will be from the thoughts of Jordan and Laura Bracy, thoughts which will hopefully cause you to think about what you believe, why you believe it, and how it impacts and affects your life. To find out more about us and about this blog please visit the "About Us" section. </p>
+	  </div>
+	
+	  <%= yield %>
+	</div>
+	<div id="spacer"></div>
+	<div id="footer">
+		<ul>
+			<li>Designed and Developed by: Jordan Bracy</li>
+		</ul>
+	</div>
+
+</body>
+</html>

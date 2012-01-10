@@ -1,0 +1,23 @@
+<div id="posts">
+	<h1> All Posts </h1>
+	<% @user = User.all%>
+	<% @user.each do |user| %>
+		<div class="<%=user.name%>">
+		<h2> Posts by <%=user.name%></h2>
+		<% if user.blogs.empty?%>
+			<p>There are no posts!</p>
+		<%else%>
+			<table>
+  				<tr>
+    				<th>Title</th>
+  				</tr>
+				<% user.blogs.each do |b| %>
+  				<tr>
+    				<td><%= link_to b.title, :action => 'show', :user_id => user, :id => b %></td>
+  				</tr>
+				<%end%>
+			</table>
+		<%end%>
+		</div>
+	<%end%>	
+</div>

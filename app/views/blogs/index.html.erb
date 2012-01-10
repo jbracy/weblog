@@ -1,0 +1,26 @@
+<div id="bindex">
+<%= link_to 'New Post', new_blog_path, {:style => "float: right"} %>
+
+<h1><%= @current_user.name%>'s Blogs</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Content</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @blogs.each do |blog| %>
+  <tr>
+    <td><%= blog.title %></td>
+    <td><%= truncate(blog.content, :length => 210) %></td>
+    <td><%= link_to 'Show', blog %></td>
+    <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
+    <td><%= link_to 'Destroy', blog, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+</div>

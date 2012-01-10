@@ -1,0 +1,17 @@
+<div id="showpost">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @blog.title %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @blog.content %>
+</p>
+<% if @current_user != nil%>
+	<%= link_to 'Edit', edit_blog_path(@blog) %> |
+	<%= link_to 'Back', blogs_path %>
+<%end%>
+</div>

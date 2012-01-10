@@ -1,0 +1,33 @@
+// Place all the styles related to the admin controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#adminouter{}
+
+#adminouter h1{
+	color: #000000;
+	text-align: center;
+	padding-bottom: 1em;
+	border-bottom: solid black;
+}
+
+#admininner {
+	padding: 5px;
+	background: #808080;
+	margin: 1em;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	color: #000000;
+}
+
+#admininner a{
+	text-decoration: none;
+}
+#admininner a:hover{
+	color: #FFFFFF;
+}
+#admininner ul{
+	display: inline;
+}
+#admininner li{
+	display: block;
+}

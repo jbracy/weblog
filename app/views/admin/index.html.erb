@@ -1,0 +1,12 @@
+<div id="adminouter">
+	
+	<h1> Welcome! </h1>
+	<div id="admininner">
+	<h2>What would you like to do?</h2>
+			<ul>
+				<li><%=link_to "See My Posts", blogs_path%></li>
+				<li><%=link_to "New Post", new_blog_path%></li>
+				<li><%=link_to 'Logout', logout_path, :method => :delete%></li>
+			</ul>
+	</div>
+</div>
