@@ -21,6 +21,7 @@ a {
 	text-decoration:none;
 	color:#FFFFFF;
 }
+a:hover {background-color:#4D4D4D;}
 
 #navbar {
 	background-color: #4D4D4D;
