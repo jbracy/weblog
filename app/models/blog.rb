@@ -4,4 +4,5 @@ class Blog < ActiveRecord::Base
   validates :title, :presence => true, :uniqueness => true
   validates :content, :presence => true
   validates_presence_of :user
+  attr_accessible :title, :content
 end

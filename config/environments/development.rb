@@ -34,8 +34,8 @@ Weblog::Application.configure do
     :address => "smtp.gmail.com",
     :port => 587,
     :authentication => "plain",
-    :user_name => "jebracy",
-    :password => "Pidgen13",
+    :user_name => "",
+    :password => "",
     :enable_starttls_auto => true
   }
 end

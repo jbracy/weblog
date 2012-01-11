@@ -17,8 +17,11 @@ body{
 	border:0;
 }
 
-a {text-decoration:none;}
-a:hover{color:#FFFFFF}
+a {
+	text-decoration:none;
+	color:#FFFFFF
+}
+a:hover{}
 
 #navbar {
 	background-color: #4D4D4D;
@@ -53,7 +56,7 @@ a:hover{color:#FFFFFF}
 }
 
 #headtext{ 
-	background: #800000;
+	background: #063B01;
 	margin: 20px;
 	padding: 10px;
 	color: #F5F5F5;
@@ -104,8 +107,9 @@ a:hover{color:#FFFFFF}
 }
 
 #spacer{
-	height:20px;
+	height:25px;
 }
+
 #footer{
 	background-color: #4D4D4D;
 	width: 100%;
@@ -124,4 +128,5 @@ a:hover{color:#FFFFFF}
 }
 #footer li{
 	display:inline;
+	color: #FFFFFF;
 }
