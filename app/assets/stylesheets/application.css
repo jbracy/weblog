@@ -21,7 +21,7 @@ a {
 	text-decoration:none;
 	color:#FFFFFF
 }
-a:hover{}
+a:hover{text-decoration:none;}
 
 #navbar {
 	background-color: #4D4D4D;
