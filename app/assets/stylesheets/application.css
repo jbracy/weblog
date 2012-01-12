@@ -27,6 +27,7 @@ a:hover {background-color:#4D4D4D;}
 #navbar {
 	background-color: #4D4D4D;
 	width: 100%;
+	min-width: 828px;
 	height: 25px;
 	display: block;
 	position: fixed;
@@ -57,7 +58,7 @@ a:hover {background-color:#4D4D4D;}
 }
 
 #headtext{ 
-	background: #063B01;
+	background: #003300;
 	margin: 20px;
 	padding: 10px;
 	color: #F5F5F5;
@@ -68,6 +69,7 @@ a:hover {background-color:#4D4D4D;}
 #content {
     margin: 30px auto 1px auto;
     width: 90%;
+	min-width: 828px;
     background: url(/images/white80.png) repeat;
 	overflow: auto;
 	border-radius: 15px;
@@ -114,6 +116,7 @@ a:hover {background-color:#4D4D4D;}
 #footer{
 	background-color: #4D4D4D;
 	width: 100%;
+	min-width: 828px;
 	height: 20px;
 	display: block;
 	position: absolute;

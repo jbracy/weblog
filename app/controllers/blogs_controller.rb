@@ -1,5 +1,5 @@
 class BlogsController < ApplicationController
-  skip_before_filter :authorize
+  before_filter :authorize
   
   # GET /blogs
   # GET /blogs.json

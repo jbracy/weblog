@@ -13,7 +13,7 @@
   				</tr>
 				<% user.blogs.each do |b| %>
   				<tr>
-    				<td><%= link_to b.title, :action => 'show', :user_id => user, :id => b %></td>
+    				<td><%= link_to b.title, :controller => 'blogs', :action => 'show', :user_id => user, :id => b %></td>
   				</tr>
 				<%end%>
 			</table>

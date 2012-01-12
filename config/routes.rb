@@ -1,4 +1,10 @@
 Weblog::Application.routes.draw do
+  root :to => "pages#home"
+  
+  get 'home' => "pages#home"
+  get 'posts' => "pages#posts"
+  get 'about' => "pages#about"
+  get 'contact' => "pages#contact"
   get 'admin' => "admin#index"
   
   controller :sessions do
@@ -9,15 +15,6 @@ Weblog::Application.routes.draw do
   
   resources :users
   resources :blogs
-  
-  get 'newuser' => "users#new"
-  
-  root :to => "blogs#home"
-  
-  get 'home' => "blogs#home"
-  get 'posts' => "blogs#posts"
-  get 'about' => "blogs#about"
-  get 'contact' => "blogs#contact"
 
   post 'contact', :to => "blogs#send_contact"
   # The priority is based upon order of creation:
