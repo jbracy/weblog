@@ -3,8 +3,10 @@ Weblog::Application.routes.draw do
   
   get 'home' => "pages#home"
   get 'posts' => "pages#posts"
+  get 'view' => "pages#view"
   get 'about' => "pages#about"
   get 'contact' => "pages#contact"
+  
   get 'admin' => "admin#index"
   
   controller :sessions do

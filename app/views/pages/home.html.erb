@@ -2,18 +2,18 @@
 	<h1> Welcome! </h1>
 	
 	<div class="Jordan">
-		<% user = User.find_by_name('Jordan')%>
+		<%# user = User.find_by_name('Jordan')%>
 		<h2>Jordan's Blog</h2>
-		<% if  user.blogs.last != nil %>
+		<%# if  user.blogs.last != nil %>
 			<table>
 				<tr>
 					<td class="title">
-						<strong><%= user.blogs.last.title %></strong>
+						<strong><%=# user.blogs.last.title %></strong>
 					</td>
 				</tr>
 				<tr>
 					<td class="blogtent"> 
-						<%= user.blogs.last.content %>
+						<%=# user.blogs.last.content %>
 					</td>
 				</tr>
 			</table>
@@ -22,18 +22,18 @@
 		<%end%>
 	</div>
 	<div class="Laura">
-		<%user = User.find_by_name('Laura')%>
+		<%#user = User.find_by_name('Laura')%>
 		<h2>Laura's Blog</h2>
-		<% if  user.blogs.last != nil %>
+		<%# if  user.blogs.last != nil %>
 			<table>
 				<tr>
 					<td class="title">
-						<strong><%= user.blogs.last.title %></strong>
+						<strong><%#= user.blogs.last.title %></strong>
 					</td>
 				</tr>
 				<tr>
 					<td class="blogtent"> 
-						<%= user.blogs.last.content %>
+						<%#= user.blogs.last.content %>
 					</td>
 				</tr>
 			</table>

@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
   before_filter :authorize
+  skip_before_filter :authorize, :only => [:show]
   
   # GET /blogs
   # GET /blogs.json
@@ -15,13 +16,8 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
-    if current_user != nil
-      @blog = current_user.blogs.find(params[:id])
-    else
-      user = User.find_by_id(params[:user_id])
-      @blog = user.blogs.find(params[:id])
-    end
-
+    @blog = current_user.blogs.find(params[:id])
+    
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @blog }
@@ -101,4 +97,5 @@ class BlogsController < ApplicationController
       redirect_to '/'
     end
   end
+
 end
