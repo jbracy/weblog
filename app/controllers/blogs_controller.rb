@@ -16,7 +16,7 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
-    @blog = current_user.blogs.find(params[:id])
+    @blog = Blog.find(params[:id])
     
     respond_to do |format|
       format.html # show.html.erb
