@@ -5,10 +5,11 @@
 		<% user = User.find_by_name('Jordan')%>
 		<h2>Jordan's Blog</h2>
 		<% if  user.blogs.last != nil %>
+			<%blog=user.blogs.last%>
 			<table>
 				<tr>
 					<td class="title">
-						<strong><%= user.blogs.last.title %></strong>
+						<strong><%=link_to user.blogs.last.title, blog_path(blog) %></strong>
 					</td>
 				</tr>
 				<tr>
@@ -21,14 +22,16 @@
 			<p>There are no posts</p>
 		<%end%>
 	</div>
+	
 	<div class="Laura">
 		<%user = User.find_by_name('Laura')%>
 		<h2>Laura's Blog</h2>
 		<% if  user.blogs.last != nil %>
+			<%blog=user.blogs.last%>
 			<table>
 				<tr>
 					<td class="title">
-						<strong><%= user.blogs.last.title %></strong>
+						<strong><%= link_to user.blogs.last.title, blog_path(blog) %></strong>
 					</td>
 				</tr>
 				<tr>
